@@ -1,0 +1,174 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addSection button {
+  width: 50%;
+  margin: 0.25rem;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  background: #afd5f7;
+  padding: 1rem;
+  border-radius: 18px;
+}
+.inputs input {
+  width: 300px;
+  height: 15px;
+  font-size: 1rem;
+  padding: 5px;
+}
+.infoBttn {
+  width: 300px;
+  height: 50px;
+  margin-top: 15px;
+  box-shadow: 0px 0px 12px lightsteelblue;
+}
+.infoBttn:hover {
+  cursor: pointer;
+}
+.employees {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  margin: 1rem auto;
+  background: #b0d5f7;
+  border-radius: 18px;
+}
+.employee {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  background: aliceblue;
+  box-shadow: 0px 0px 12px lightsteelblue;
+}
+.item {
+  text-align: center;
+}
+.newWageHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 1rem; */
+}
+.newInput {
+  height: auto;
+}
+.deleteBttn {
+  display: flex;
+  align-items: center;
+}
+.deleteBttn button {
+  height: fit-content;
+}
+.itemHolder {
+  width: -webkit-fill-available;
+  height: auto;
+  margin: 0.5rem;
+}
+.employeeHeader {
+  display: flex;
+  flex-direction: row;
+  margin: 0.75rem;
+  align-self: flex-start;
+}
+.employeeHeaderBttns {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.headerBttnGroup {
+  display: flex;
+  flex-direction: row;
+}
+.headerBttnGroup button {
+  height: 20px;
+  padding: 0;
+  margin-left: 0.25rem;
+}
+.material-symbols-outlined {
+  font-size: 1rem;
+}
+.headerBttnGroupTitle {
+  margin-left: 1rem;
+}
+
+#portal .container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.container .modal {
+  z-index: 1;
+  width: 350px;
+  height: 220px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  position: relative;
+  animation: animate 0.3s;
+  flex-direction: column;
+  padding: 1rem;
+}
+.modal button {
+  padding: 8px 11px;
+  background: crimson;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding: 8px 11px;
+  background: crimson;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+@keyframes animate {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.searchBy {
+  margin: 1rem;
+}
+.searchBar {
+  margin: 1rem;
+}
