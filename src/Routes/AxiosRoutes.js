@@ -13,7 +13,9 @@ const addEmployee = (
   setEmployeeList,
   employeeList
 ) => {
-  Axios.post("https://employeedatabasesql.herokuapp.com/create", {
+  // https://employeedatabasesql.herokuapp.com
+
+  Axios.post("/create", {
     name: name,
     age: age,
     country: country,
@@ -41,138 +43,106 @@ const addEmployee = (
 
 //Get all employees unordered
 const getEmployees = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employees").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employees").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 
 //Get all employees ordered by name ASC
 const getEmployeesName = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employeesName").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employeesName").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 
 //Get all employees ordered by name DESC
 const getEmployeesNameDesc = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employeesNameDesc").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employeesNameDesc").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 
 //Get all employees ordered by age ASC
 const getEmployeesAge = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employeesAge").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employeesAge").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Get all employees ordered by age DESC
 const getEmployeesAgeDesc = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employeesAgeDesc").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employeesAgeDesc").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Get all employees ordered by country ASC
 const getEmployeesCountry = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employeesCountry").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employeesCountry").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Get all employees ordered by country DESC
 const getEmployeesCountryDesc = (setEmployeeList) => {
-  Axios.get(
-    "https://employeedatabasesql.herokuapp.com/employeesCountryDesc"
-  ).then((response) => {
+  Axios.get("/employeesCountryDesc").then((response) => {
     setEmployeeList(response.data);
   });
 };
 //Get all employees ordered by position ASC
 const getEmployeesPosition = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employeesPosition").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employeesPosition").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Get all employees ordered by position DESC
 const getEmployeesPositionDesc = (setEmployeeList) => {
-  Axios.get(
-    "https://employeedatabasesql.herokuapp.com/employeesPositionDesc"
-  ).then((response) => {
+  Axios.get("/employeesPositionDesc").then((response) => {
     setEmployeeList(response.data);
   });
 };
 //Get all employees ordered by wage ASC
 const getEmployeesWage = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employeesWage").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employeesWage").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Get all employees ordered by wage DESC
 const getEmployeesWageDesc = (setEmployeeList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/employeesWageDesc").then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get("/employeesWageDesc").then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Get employees by searching a name
 const getName = (name, setEmployeeList) => {
-  Axios.get(`https://employeedatabasesql.herokuapp.com/name/${name}`).then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get(`/name/${name}`).then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Get employees by searching an age
 const getAge = (age, setEmployeeList) => {
-  Axios.get(`https://employeedatabasesql.herokuapp.com/age/${age}`).then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get(`/age/${age}`).then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Get employees by searching a country
 const getCountry = (country, setEmployeeList) => {
-  Axios.get(
-    `https://employeedatabasesql.herokuapp.com/country/${country}`
-  ).then((response) => {
+  Axios.get(`/country/${country}`).then((response) => {
     setEmployeeList(response.data);
   });
 };
 //Get employees by searching a position
 const getPosition = (position, setEmployeeList) => {
-  Axios.get(
-    `https://employeedatabasesql.herokuapp.com/position/${position}`
-  ).then((response) => {
+  Axios.get(`/position/${position}`).then((response) => {
     setEmployeeList(response.data);
   });
 };
 //Get employees by searching a wage
 const getWage = (wage, setEmployeeList) => {
-  Axios.get(`https://employeedatabasesql.herokuapp.com/wage/${wage}`).then(
-    (response) => {
-      setEmployeeList(response.data);
-    }
-  );
+  Axios.get(`/wage/${wage}`).then((response) => {
+    setEmployeeList(response.data);
+  });
 };
 //Update an employees name
 const updateEmployeeName = (id, newName, setEmployeeList, employeeList) => {
-  Axios.put("https://employeedatabasesql.herokuapp.com/updateName", {
+  Axios.put("/updateName", {
     name: newName,
     id: id,
   }).then((response) => {
@@ -194,7 +164,7 @@ const updateEmployeeName = (id, newName, setEmployeeList, employeeList) => {
 };
 //Update an employees age
 const updateEmployeeAge = (id, newAge, setEmployeeList, employeeList) => {
-  Axios.put("https://employeedatabasesql.herokuapp.com/updateAge", {
+  Axios.put("/updateAge", {
     age: newAge,
     id: id,
   }).then((response) => {
@@ -221,7 +191,7 @@ const updateEmployeeCountry = (
   setEmployeeList,
   employeeList
 ) => {
-  Axios.put("https://employeedatabasesql.herokuapp.com/updateCountry", {
+  Axios.put("/updateCountry", {
     country: newCountry,
     id: id,
   }).then((response) => {
@@ -248,7 +218,7 @@ const updateEmployeePosition = (
   setEmployeeList,
   employeeList
 ) => {
-  Axios.put("https://employeedatabasesql.herokuapp.com/updatePosition", {
+  Axios.put("/updatePosition", {
     position: newPosition,
     id: id,
   }).then((response) => {
@@ -270,7 +240,7 @@ const updateEmployeePosition = (
 };
 //Update an employees wage
 const updateEmployeeWage = (id, newWage, setEmployeeList, employeeList) => {
-  Axios.put("https://employeedatabasesql.herokuapp.com/updateWage", {
+  Axios.put("/updateWage", {
     wage: newWage,
     id: id,
   }).then((response) => {
@@ -297,7 +267,7 @@ const updateEmployeeSupervisor = (
   setEmployeeList,
   employeeList
 ) => {
-  Axios.put("https://employeedatabasesql.herokuapp.com/updateSupervisor", {
+  Axios.put("/updateSupervisor", {
     wage: newManager,
     id: id,
   }).then((response) => {
@@ -320,15 +290,13 @@ const updateEmployeeSupervisor = (
 };
 //Delete an employee
 const deleteEmployee = (id, setEmployeeList, employeeList) => {
-  Axios.delete(`https://employeedatabasesql.herokuapp.com/delete/${id}`).then(
-    (response) => {
-      setEmployeeList(
-        employeeList.filter((val) => {
-          return val.id != id;
-        })
-      );
-    }
-  );
+  Axios.delete(`/delete/${id}`).then((response) => {
+    setEmployeeList(
+      employeeList.filter((val) => {
+        return val.id != id;
+      })
+    );
+  });
 };
 
 //////////////    MANAGERS   //////////////////
@@ -342,7 +310,7 @@ const addManager = (
   managerList,
   title
 ) => {
-  Axios.post("https://employeedatabasesql.herokuapp.com/createManager", {
+  Axios.post("/createManager", {
     first_name: firstName,
     last_name: lastName,
     emp_id: empID,
@@ -366,110 +334,84 @@ const addManager = (
 
 //Get all managers unordered
 const getManagers = (setManagerList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/managers").then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get("/managers").then((response) => {
+    setManagerList(response.data);
+  });
 };
 
 //Get all managers ordered by first_name ASC
 const getManagerFirstName = (setManagerList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/managerFirstName").then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get("/managerFirstName").then((response) => {
+    setManagerList(response.data);
+  });
 };
 //Get all managers ordered by first_name DESC
 const getManagerFirstNameDesc = (setManagerList) => {
-  Axios.get(
-    "https://employeedatabasesql.herokuapp.com/managerFirstNameDesc"
-  ).then((response) => {
+  Axios.get("/managerFirstNameDesc").then((response) => {
     setManagerList(response.data);
   });
 };
 
 //Get all managers ordered by last_name
 const getManagerLastName = (setManagerList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/managerLastName").then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get("/managerLastName").then((response) => {
+    setManagerList(response.data);
+  });
 };
 //Get all managers ordered by last_name DESC
 const getManagerLastNameDesc = (setManagerList) => {
-  Axios.get(
-    "https://employeedatabasesql.herokuapp.com/managerLastNameDesc"
-  ).then((response) => {
+  Axios.get("/managerLastNameDesc").then((response) => {
     setManagerList(response.data);
   });
 };
 
 //Get all managers ordered by emp_id ASC
 const getManagersEmpID = (setManagerList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/managersID").then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get("/managersID").then((response) => {
+    setManagerList(response.data);
+  });
 };
 //Get all managers ordered by emp_id DESC
 const getManagersEmpIDDesc = (setManagerList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/managersIDDesc").then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get("/managersIDDesc").then((response) => {
+    setManagerList(response.data);
+  });
 };
 //Get all managers ordered by title ASC
 const getManagersTitle = (setManagerList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/managersTitle").then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get("/managersTitle").then((response) => {
+    setManagerList(response.data);
+  });
 };
 //Get all managers ordered by title DESC
 const getManagersTitleDesc = (setManagerList) => {
-  Axios.get("https://employeedatabasesql.herokuapp.com/managersTitleDesc").then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get("/managersTitleDesc").then((response) => {
+    setManagerList(response.data);
+  });
 };
 //Get managers by searching a first name
 const getFirstName = (firstName, setManagerList) => {
-  Axios.get(
-    `https://employeedatabasesql.herokuapp.com/firstName/${firstName}`
-  ).then((response) => {
+  Axios.get(`/firstName/${firstName}`).then((response) => {
     setManagerList(response.data);
   });
 };
 //Get managers by searching last name
 const getLastName = (lastName, setManagerList) => {
-  Axios.get(
-    `https://employeedatabasesql.herokuapp.com/lastName/${lastName}`
-  ).then((response) => {
+  Axios.get(`/lastName/${lastName}`).then((response) => {
     setManagerList(response.data);
   });
 };
 //Get employees by searching a ID
 const getID = (id, setManagerList) => {
-  Axios.get(`https://employeedatabasesql.herokuapp.com/id/${id}`).then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get(`/id/${id}`).then((response) => {
+    setManagerList(response.data);
+  });
 };
 //Get manager by searching a title
 const getTitle = (title, setManagerList) => {
-  Axios.get(`https://employeedatabasesql.herokuapp.com/title/${title}`).then(
-    (response) => {
-      setManagerList(response.data);
-    }
-  );
+  Axios.get(`/title/${title}`).then((response) => {
+    setManagerList(response.data);
+  });
 };
 //Update a manager first name
 const updateManagerFirstName = (
@@ -478,13 +420,10 @@ const updateManagerFirstName = (
   setManagerList,
   managerList
 ) => {
-  Axios.put(
-    "https://employeedatabasesql.herokuapp.com/updateManagerFirstName",
-    {
-      first_name: newFirstName,
-      manager_id: manager_id,
-    }
-  ).then((response) => {
+  Axios.put("/updateManagerFirstName", {
+    first_name: newFirstName,
+    manager_id: manager_id,
+  }).then((response) => {
     setManagerList(
       managerList.map((val) => {
         return val.manager_id == manager_id
@@ -507,7 +446,7 @@ const updateManagerLastName = (
   setManagerList,
   managerList
 ) => {
-  Axios.put("https://employeedatabasesql.herokuapp.com/updateManagerLastName", {
+  Axios.put("/updateManagerLastName", {
     last_name: newLastName,
     manager_id: manager_id,
   }).then((response) => {
@@ -532,7 +471,7 @@ const updateManagerTitle = (
   setManagerList,
   managerList
 ) => {
-  Axios.put("https://employeedatabasesql.herokuapp.com/updateManagerTitle", {
+  Axios.put("/updateManagerTitle", {
     title: newTitle,
     manager_id: manager_id,
   }).then((response) => {
@@ -554,9 +493,7 @@ const updateManagerTitle = (
 
 // Delete a manager
 const deleteManager = (id, setManagerList, managerList) => {
-  Axios.delete(
-    `https://employeedatabasesql.herokuapp.com/deleteManager/${id}`
-  ).then((response) => {
+  Axios.delete(`/deleteManager/${id}`).then((response) => {
     setManagerList(
       managerList.filter((val) => {
         return val.id != id;
